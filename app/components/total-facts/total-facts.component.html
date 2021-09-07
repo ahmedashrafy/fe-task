@@ -1,0 +1,20 @@
+<h1 class = "subheader"> Total Nutrition Facts </h1>
+<table>
+    <tr>
+      <th>Label</th>
+      <th>Amount</th> 
+      <th>Unit</th>
+    </tr>
+
+    <tr>
+        <td>Calories</td>
+        <td>{{Total.calories}}</td> 
+        <td>cal</td>
+    </tr>
+
+    <tr *ngFor="let item of items" >
+        <td>{{Total.totalDaily[item].label}}</td>
+        <td>{{Total.totalDaily[item].quantity.toPrecision(2)}}</td> 
+        <td>{{Total.totalDaily[item].unit}}</td>
+    </tr>
+</table>
