@@ -1,0 +1,22 @@
+<div class="input-form">
+    <form (ngSubmit)="submitRecipe()" class="input-form">
+        <textarea 
+            name="Recipe" 
+            id="Recipe" 
+            class="text-input" 
+            [(ngModel)]="Recipe"
+            placeholder="Name    Quantity    Unit"
+        > 
+        </textarea>
+    
+        <button 
+            name="submitRecipe" 
+            id="submitRecipe" 
+            type="submit" 
+            [ngClass] = "Recipe? ' submit-button active-button':' submit-button disabled-button'"
+        > 
+        Submit 
+        </button>
+    
+    </form>
+</div>
